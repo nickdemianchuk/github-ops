@@ -43,7 +43,7 @@ module "claude_ops" {
 
   name        = "claude-ops"
   description = "Personal Claude configs"
-  visibility  = "public"
+  visibility  = "private"
   topics      = ["claude", "ai"]
 
   rulesets = [
