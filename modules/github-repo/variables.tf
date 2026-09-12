@@ -42,6 +42,11 @@ variable "rulesets" {
         exclude = list(string)
       })
     }))
+    bypass_actors = optional(list(object({
+      actor_id    = number
+      actor_type  = string
+      bypass_mode = optional(string, "always")
+    })), [])
     rules = object({
       creation         = optional(bool)
       deletion         = optional(bool)

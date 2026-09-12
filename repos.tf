@@ -20,6 +20,12 @@ module "actions" {
           exclude = []
         }
       }
+      bypass_actors = [
+        {
+          actor_id   = 1
+          actor_type = "RepositoryRole"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -30,6 +36,14 @@ module "actions" {
             { context = "lint-pr" },
           ]
         }
+      }
+    },
+    {
+      name        = "Disable tag deletion"
+      target      = "tag"
+      enforcement = "active"
+      rules = {
+        deletion = true
       }
     }
   ]
@@ -57,6 +71,12 @@ module "claude_ops" {
           exclude = []
         }
       }
+      bypass_actors = [
+        {
+          actor_id   = 1
+          actor_type = "RepositoryRole"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -67,6 +87,14 @@ module "claude_ops" {
             { context = "lint-pr / lint-pr" },
           ]
         }
+      }
+    },
+    {
+      name        = "Disable tag deletion"
+      target      = "tag"
+      enforcement = "active"
+      rules = {
+        deletion = true
       }
     }
   ]
@@ -94,6 +122,12 @@ module "github_ops" {
           exclude = []
         }
       }
+      bypass_actors = [
+        {
+          actor_id   = 1
+          actor_type = "RepositoryRole"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -104,6 +138,14 @@ module "github_ops" {
             { context = "lint-pr / lint-pr" },
           ]
         }
+      }
+    },
+    {
+      name        = "Disable tag deletion"
+      target      = "tag"
+      enforcement = "active"
+      rules = {
+        deletion = true
       }
     }
   ]
