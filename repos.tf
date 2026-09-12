@@ -63,8 +63,8 @@ module "claude_ops" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits" },
-            { context = "lint-pr" },
+            { context = "lint-commits / lint-commits" },
+            { context = "lint-pr / lint-pr" },
           ]
         }
       }
@@ -100,8 +100,8 @@ module "github_ops" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits" },
-            { context = "lint-pr" },
+            { context = "lint-commits / lint-commits" },
+            { context = "lint-pr / lint-pr" },
           ]
         }
       }
