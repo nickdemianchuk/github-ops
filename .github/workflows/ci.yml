@@ -5,7 +5,7 @@ on:
     types: [opened, edited, synchronize, reopened]
   push:
     branches-ignore: [main]
-    tags-ignore: [**]
+    tags-ignore: ['**']
 
 jobs:
   lint-pr:
