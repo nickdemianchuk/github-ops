@@ -20,12 +20,6 @@ module "actions" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        }
-      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -71,12 +65,6 @@ module "claude_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        }
-      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -122,12 +110,6 @@ module "github_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        }
-      ]
       rules = {
         deletion         = true
         non_fast_forward = true
