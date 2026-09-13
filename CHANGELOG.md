@@ -1,3 +1,11 @@
+## [0.2.1](https://github.com/nickdemianchuk/github-ops/compare/0.2.0...0.2.1) (2026-09-13)
+
+
+### Bug Fixes
+
+* grant pull-requests write permission for tf-apply caller ([#22](https://github.com/nickdemianchuk/github-ops/issues/22)) ([3d94a31](https://github.com/nickdemianchuk/github-ops/commit/3d94a3169878520acd9dd557a110140286b071eb))
+* simplify branches-ignore syntax in ci workflow ([#21](https://github.com/nickdemianchuk/github-ops/issues/21)) ([59967fb](https://github.com/nickdemianchuk/github-ops/commit/59967fb9de0e3358bae6c5e5e44e01622bad9a03))
+
 # [0.2.0](https://github.com/nickdemianchuk/github-ops/compare/0.1.1...0.2.0) (2026-09-13)
 
 
