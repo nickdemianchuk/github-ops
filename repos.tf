@@ -24,6 +24,10 @@ module "actions" {
         {
           actor_id   = local.github_actions_integration_id
           actor_type = "Integration"
+        },
+        {
+          actor_id   = 5
+          actor_type = "RepositoryRole"
         }
       ]
       rules = {
@@ -75,6 +79,10 @@ module "claude_ops" {
         {
           actor_id   = local.github_actions_integration_id
           actor_type = "Integration"
+        },
+        {
+          actor_id   = 5
+          actor_type = "RepositoryRole"
         }
       ]
       rules = {
@@ -126,6 +134,10 @@ module "github_ops" {
         {
           actor_id   = local.github_actions_integration_id
           actor_type = "Integration"
+        },
+        {
+          actor_id   = 5
+          actor_type = "RepositoryRole"
         }
       ]
       rules = {
