@@ -21,6 +21,9 @@ jobs:
   tf-apply:
     if: github.ref_type == 'tag' || github.event_name == 'workflow_dispatch'
     uses: nickdemianchuk/actions/.github/workflows/tf-apply.yml@main
+    permissions:
+      contents: read
+      pull-requests: write
     with:
       workspace: ${{ github.event.repository.name }}
     secrets:
