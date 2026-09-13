@@ -1,3 +1,10 @@
+## [0.1.1](https://github.com/nickdemianchuk/github-ops/compare/0.1.0...0.1.1) (2026-09-13)
+
+
+### Bug Fixes
+
+* update required status checks context format ([#19](https://github.com/nickdemianchuk/github-ops/issues/19)) ([f2d1d3a](https://github.com/nickdemianchuk/github-ops/commit/f2d1d3afb0cc8fc7dd113c06517debb520c37c46))
+
 # [0.1.0](https://github.com/nickdemianchuk/github-ops/compare/0.0.0...0.1.0) (2026-09-13)
 
 
