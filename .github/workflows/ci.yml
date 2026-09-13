@@ -4,8 +4,7 @@ on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
   push:
-    branches-ignore:
-      - main
+    branches-ignore: [main]
 
 jobs:
   lint-pr:
