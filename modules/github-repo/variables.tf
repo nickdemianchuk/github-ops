@@ -31,6 +31,11 @@ variable "delete_branch_on_merge" {
   default = true
 }
 
+variable "allow_auto_merge" {
+  type    = bool
+  default = true
+}
+
 variable "rulesets" {
   type = list(object({
     name        = string
