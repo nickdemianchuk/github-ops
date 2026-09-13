@@ -8,12 +8,6 @@ module "actions" {
   description = "Reusable GitHub Actions workflows"
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
-  collaborators = [
-    {
-      username   = local.semantic_release_bot_username
-      permission = "push"
-    }
-  ]
 
   rulesets = [
     {
@@ -28,8 +22,8 @@ module "actions" {
       }
       bypass_actors = [
         {
-          actor_id   = local.semantic_release_bot_id
-          actor_type = "User"
+          actor_id   = local.github_actions_integration_id
+          actor_type = "Integration"
         }
       ]
       rules = {
@@ -65,12 +59,6 @@ module "claude_ops" {
   description = "Personal Claude configs"
   visibility  = "public"
   topics      = ["claude", "ai"]
-  collaborators = [
-    {
-      username   = local.semantic_release_bot_username
-      permission = "push"
-    }
-  ]
 
   rulesets = [
     {
@@ -85,8 +73,8 @@ module "claude_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = local.semantic_release_bot_id
-          actor_type = "User"
+          actor_id   = local.github_actions_integration_id
+          actor_type = "Integration"
         }
       ]
       rules = {
@@ -122,12 +110,6 @@ module "github_ops" {
   description = "All things GitHub, managed via Terraform"
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
-  collaborators = [
-    {
-      username   = local.semantic_release_bot_username
-      permission = "push"
-    }
-  ]
 
   rulesets = [
     {
@@ -142,8 +124,8 @@ module "github_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = local.semantic_release_bot_id
-          actor_type = "User"
+          actor_id   = local.github_actions_integration_id
+          actor_type = "Integration"
         }
       ]
       rules = {
