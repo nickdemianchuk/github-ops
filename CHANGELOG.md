@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/nickdemianchuk/github-ops/compare/0.1.1...0.2.0) (2026-09-13)
+
+
+### Features
+
+* add workflow_dispatch to cd, fix tf-apply workspace config ([#20](https://github.com/nickdemianchuk/github-ops/issues/20)) ([c892059](https://github.com/nickdemianchuk/github-ops/commit/c8920598b718fd748f15fc2f1830df14530b1880))
+
 ## [0.1.1](https://github.com/nickdemianchuk/github-ops/compare/0.1.0...0.1.1) (2026-09-13)
 
 
