@@ -22,10 +22,6 @@ module "actions" {
       }
       bypass_actors = [
         {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        },
-        {
           actor_id   = 5
           actor_type = "RepositoryRole"
         }
@@ -77,10 +73,6 @@ module "claude_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        },
-        {
           actor_id   = 5
           actor_type = "RepositoryRole"
         }
@@ -131,10 +123,6 @@ module "github_ops" {
         }
       }
       bypass_actors = [
-        {
-          actor_id   = local.github_actions_integration_id
-          actor_type = "Integration"
-        },
         {
           actor_id   = 5
           actor_type = "RepositoryRole"
