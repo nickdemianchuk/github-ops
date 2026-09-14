@@ -107,9 +107,8 @@ variable "actions_variables" {
 
 variable "apps" {
   type = map(object({
-    installation_id = string
-    client_id       = string
-    private_key     = string
+    client_id   = string
+    private_key = string
   }))
   default = {}
 }
