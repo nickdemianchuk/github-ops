@@ -1,3 +1,10 @@
+## [0.4.2](https://github.com/nickdemianchuk/github-ops/compare/0.4.1...0.4.2) (2026-09-14)
+
+
+### Bug Fixes
+
+* update release job condition in cd.yml ([#28](https://github.com/nickdemianchuk/github-ops/issues/28)) ([56ed5ab](https://github.com/nickdemianchuk/github-ops/commit/56ed5abc2e46791c803f5477645c36958fb1852e))
+
 ## [0.4.1](https://github.com/nickdemianchuk/github-ops/compare/0.4.0...0.4.1) (2026-09-14)
 
 
