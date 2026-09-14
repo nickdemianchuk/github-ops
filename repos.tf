@@ -9,11 +9,8 @@ module "actions" {
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
 
-  actions_variables = {
-    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
-  }
-  actions_secrets = {
-    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
+  apps = {
+    octo_buddy = local.octo_buddy
   }
 
   rulesets = [
@@ -29,7 +26,7 @@ module "actions" {
       }
       bypass_actors = [
         {
-          actor_id   = module.octo_buddy.app_id
+          actor_id   = local.octo_buddy.app_id
           actor_type = "Integration"
         }
       ]
@@ -68,11 +65,8 @@ module "claude_ops" {
   visibility  = "public"
   topics      = ["claude", "ai"]
 
-  actions_variables = {
-    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
-  }
-  actions_secrets = {
-    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
+  apps = {
+    octo_buddy = local.octo_buddy
   }
 
   rulesets = [
@@ -88,7 +82,7 @@ module "claude_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = module.octo_buddy.app_id
+          actor_id   = local.octo_buddy.app_id
           actor_type = "Integration"
         }
       ]
@@ -127,11 +121,8 @@ module "git_ops" {
   visibility  = "public"
   topics      = ["git"]
 
-  actions_variables = {
-    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
-  }
-  actions_secrets = {
-    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
+  apps = {
+    octo_buddy = local.octo_buddy
   }
 
   rulesets = [
@@ -147,7 +138,7 @@ module "git_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = module.octo_buddy.app_id
+          actor_id   = local.octo_buddy.app_id
           actor_type = "Integration"
         }
       ]
@@ -186,11 +177,8 @@ module "github_ops" {
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
 
-  actions_variables = {
-    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
-  }
-  actions_secrets = {
-    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
+  apps = {
+    octo_buddy = local.octo_buddy
   }
 
   rulesets = [
@@ -206,7 +194,7 @@ module "github_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = module.octo_buddy.app_id
+          actor_id   = local.octo_buddy.app_id
           actor_type = "Integration"
         }
       ]
