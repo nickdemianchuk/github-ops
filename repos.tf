@@ -32,8 +32,9 @@ module "actions" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits / lint-commits" },
-            { context = "lint-pr / lint-pr" },
+            { context = "lint-commits / validate-commit-messages" },
+            { context = "lint-pr / validate-pr-title" },
+            { context = "lint-pr / validate-pr-body" },
           ]
         }
       }
@@ -83,8 +84,9 @@ module "claude_ops" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits / lint-commits" },
-            { context = "lint-pr / lint-pr" },
+            { context = "lint-commits / validate-commit-messages" },
+            { context = "lint-pr / validate-pr-title" },
+            { context = "lint-pr / validate-pr-body" },
           ]
         }
       }
@@ -134,8 +136,9 @@ module "git_ops" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits / lint-commits" },
-            { context = "lint-pr / lint-pr" },
+            { context = "lint-commits / validate-commit-messages" },
+            { context = "lint-pr / validate-pr-title" },
+            { context = "lint-pr / validate-pr-body" },
           ]
         }
       }
@@ -185,8 +188,9 @@ module "github_ops" {
         required_status_checks = {
           strict_required_status_checks_policy = false
           required_check = [
-            { context = "lint-commits / lint-commits" },
-            { context = "lint-pr / lint-pr" },
+            { context = "lint-commits / validate-commit-messages" },
+            { context = "lint-pr / validate-pr-title" },
+            { context = "lint-pr / validate-pr-body" },
           ]
         }
       }
