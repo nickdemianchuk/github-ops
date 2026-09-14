@@ -100,6 +100,57 @@ module "claude_ops" {
   ]
 }
 
+module "git_ops" {
+  source = "./modules/github-repo"
+  providers = {
+    github = github
+  }
+
+  name        = "git-ops"
+  description = "git configs and helpers"
+  visibility  = "public"
+  topics      = ["git"]
+
+  rulesets = [
+    {
+      name        = "Default branch"
+      target      = "branch"
+      enforcement = "active"
+      conditions = {
+        ref_name = {
+          include = ["~DEFAULT_BRANCH"]
+          exclude = []
+        }
+      }
+      bypass_actors = [
+        {
+          actor_id   = 5
+          actor_type = "RepositoryRole"
+        }
+      ]
+      rules = {
+        deletion         = true
+        non_fast_forward = true
+        required_status_checks = {
+          strict_required_status_checks_policy = false
+          required_check = [
+            { context = "lint-commits / lint-commits" },
+            { context = "lint-pr / lint-pr" },
+          ]
+        }
+      }
+    },
+    {
+      name        = "Disable tag deletion"
+      target      = "tag"
+      enforcement = "active"
+      rules = {
+        deletion = true
+      }
+    }
+  ]
+}
+
 module "github_ops" {
   source = "./modules/github-repo"
   providers = {
