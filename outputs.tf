@@ -5,3 +5,7 @@ output "repos" {
     github_ops = module.github_ops.full_name
   }
 }
+
+output "version" {
+  value = var.version
+}
