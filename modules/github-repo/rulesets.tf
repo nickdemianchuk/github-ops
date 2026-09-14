@@ -1,8 +1,6 @@
 resource "github_repository_ruleset" "this" {
   for_each = { for r in var.rulesets : r.name => r }
 
-  depends_on = [github_app_installation_repository.this]
-
   name        = each.value.name
   repository  = github_repository.this.name
   target      = each.value.target
