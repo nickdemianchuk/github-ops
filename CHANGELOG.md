@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/nickdemianchuk/github-ops/compare/0.2.1...0.3.0) (2026-09-14)
+
+
+### Features
+
+* add git-ops repo ([#24](https://github.com/nickdemianchuk/github-ops/issues/24)) ([4764a61](https://github.com/nickdemianchuk/github-ops/commit/4764a61b6a2a5154dd9c1c965605ab7ed7c8e186))
+
 ## [0.2.1](https://github.com/nickdemianchuk/github-ops/compare/0.2.0...0.2.1) (2026-09-13)
 
 
