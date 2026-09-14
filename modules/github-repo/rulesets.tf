@@ -1,6 +1,8 @@
 resource "github_repository_ruleset" "this" {
   for_each = { for r in var.rulesets : r.name => r }
 
+  depends_on = [github_app_installation_repository.this]
+
   name        = each.value.name
   repository  = github_repository.this.name
   target      = each.value.target
@@ -34,10 +36,10 @@ resource "github_repository_ruleset" "this" {
     dynamic "pull_request" {
       for_each = each.value.rules.pull_request != null ? [each.value.rules.pull_request] : []
       content {
-        required_approving_review_count = pull_request.value.required_approving_review_count
-        dismiss_stale_reviews_on_push   = pull_request.value.dismiss_stale_reviews_on_push
-        require_code_owner_review       = pull_request.value.require_code_owner_review
-        require_last_push_approval      = pull_request.value.require_last_push_approval
+        required_approving_review_count   = pull_request.value.required_approving_review_count
+        dismiss_stale_reviews_on_push     = pull_request.value.dismiss_stale_reviews_on_push
+        require_code_owner_review         = pull_request.value.require_code_owner_review
+        require_last_push_approval        = pull_request.value.require_last_push_approval
         required_review_thread_resolution = pull_request.value.required_review_thread_resolution
       }
     }
