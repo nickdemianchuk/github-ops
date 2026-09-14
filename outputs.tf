@@ -7,5 +7,5 @@ output "repos" {
 }
 
 output "version" {
-  value = var.version
+  value = var.release_version
 }

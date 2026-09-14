@@ -8,7 +8,7 @@ variable "github_owner" {
   description = "GitHub username or org"
 }
 
-variable "version" {
+variable "release_version" {
   type        = string
   description = "Version of the release being applied"
   default     = null
