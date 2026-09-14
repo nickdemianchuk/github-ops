@@ -18,8 +18,8 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v3.2.0
         with:
-          client-id: ${{ vars.GH_APP_CLIENT_ID }}
-          private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+          client-id: ${{ vars.OCTO_BUDDY_CLIENT_ID }}
+          private-key: ${{ secrets.OCTO_BUDDY_PRIVATE_KEY }}
           repositories: ${{ github.event.repository.name }}
           permission-contents: write
           permission-issues: write

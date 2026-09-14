@@ -10,10 +10,10 @@ module "actions" {
   topics      = ["github-actions", "ci-cd"]
 
   actions_variables = {
-    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
   }
   actions_secrets = {
-    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
   }
 
   rulesets = [
@@ -64,10 +64,10 @@ module "claude_ops" {
   topics      = ["claude", "ai"]
 
   actions_variables = {
-    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
   }
   actions_secrets = {
-    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
   }
 
   rulesets = [
@@ -118,10 +118,10 @@ module "git_ops" {
   topics      = ["git"]
 
   actions_variables = {
-    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
   }
   actions_secrets = {
-    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
   }
 
   rulesets = [
@@ -172,10 +172,10 @@ module "github_ops" {
   topics      = ["terraform", "github", "iac"]
 
   actions_variables = {
-    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+    OCTO_BUDDY_CLIENT_ID = module.octo_buddy.client_id
   }
   actions_secrets = {
-    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+    OCTO_BUDDY_PRIVATE_KEY = var.octo_buddy_private_key
   }
 
   rulesets = [
