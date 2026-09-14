@@ -8,33 +8,18 @@ on:
   workflow_dispatch:
 
 jobs:
-  mint-token:
-    if: "${{ github.ref_type == 'branch' && !startsWith(github.event.head_commit.message, 'chore: release') }}"
-    runs-on: ubuntu-latest
-    outputs:
-      token: ${{ steps.app-token.outputs.token }}
-    steps:
-      - name: Mint GitHub app token
-        id: app-token
-        uses: actions/create-github-app-token@v3.2.0
-        with:
-          client-id: ${{ vars.OCTO_BUDDY_CLIENT_ID }}
-          private-key: ${{ secrets.OCTO_BUDDY_PRIVATE_KEY }}
-          repositories: ${{ github.event.repository.name }}
-          permission-contents: write
-          permission-issues: write
-          permission-pull-requests: write
-
   release:
-    needs: mint-token
     if: "${{ github.ref_type == 'branch' && !startsWith(github.event.head_commit.message, 'chore: release') }}"
     permissions:
       contents: write
       issues: write
       pull-requests: write
     uses: nickdemianchuk/actions/.github/workflows/release.yml@main
+    with:
+      use_app_token: true
     secrets:
-      GH_TOKEN: ${{ needs.mint-token.outputs.token }}
+      APP_CLIENT_ID: ${{ vars.OCTO_BUDDY_CLIENT_ID }}
+      APP_PRIVATE_KEY: ${{ secrets.OCTO_BUDDY_PRIVATE_KEY }}
 
   tf-apply:
     if: github.ref_type == 'tag' || github.event_name == 'workflow_dispatch'
