@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/nickdemianchuk/github-ops/compare/0.5.1...0.5.2) (2026-09-14)
+
+
+### Bug Fixes
+
+* reuse octo buddy secret for tf apply ([#32](https://github.com/nickdemianchuk/github-ops/issues/32)) ([7fa1266](https://github.com/nickdemianchuk/github-ops/commit/7fa1266e7ca37718c0210be0e74f4e4111e589b2))
+
 ## [0.5.1](https://github.com/nickdemianchuk/github-ops/compare/0.5.0...0.5.1) (2026-09-14)
 
 
