@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/nickdemianchuk/github-ops/compare/0.5.0...0.5.1) (2026-09-14)
+
+
+### Bug Fixes
+
+* drop app install resource, unblock apply ([#31](https://github.com/nickdemianchuk/github-ops/issues/31)) ([23c4700](https://github.com/nickdemianchuk/github-ops/commit/23c4700c8f7cbba5a139faa8e9715dfbf9d232c1))
+
 # [0.5.0](https://github.com/nickdemianchuk/github-ops/compare/0.4.2...0.5.0) (2026-09-14)
 
 
