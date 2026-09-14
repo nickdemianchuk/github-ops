@@ -11,6 +11,7 @@ Each repo is declared as an instance of the `./modules/github-repo` module (`rep
 - collaborators
 - secrets
 - webhooks
+- GitHub App installation and credential distribution
 
 ## Adding a repo
 
@@ -68,6 +69,12 @@ sequenceDiagram
     CD->>GH: terraform apply
     GH-->>GH: repo created
 ```
+
+## Apps
+
+Registered GitHub Apps live in `apps.tf` (App ID, Client ID, installation ID; private key via `octo_buddy_private_key`). A repo picks up an app via `apps = { octo_buddy = local.octo_buddy }` on its `./modules/github-repo` call, which installs it on that repo, distributes its client ID/private key as Actions variable/secret, and can be referenced in a ruleset's `bypass_actors`.
+
+Currently registered: [Octo Buddy](https://github.com/apps/octo-buddy), used to mint short-lived tokens for releases in place of a stored PAT.
 
 ## Backend
 
