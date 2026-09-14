@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  mint-release-token:
+  mint-token:
     if: "${{ github.ref_type == 'branch' && !startsWith(github.event.head_commit.message, 'chore: release') }}"
     runs-on: ubuntu-latest
     outputs:
@@ -26,7 +26,7 @@ jobs:
           permission-pull-requests: write
 
   release:
-    needs: mint-release-token
+    needs: mint-token
     if: "${{ github.ref_type == 'branch' && !startsWith(github.event.head_commit.message, 'chore: release') }}"
     permissions:
       contents: write
@@ -34,7 +34,7 @@ jobs:
       pull-requests: write
     uses: nickdemianchuk/actions/.github/workflows/release.yml@main
     secrets:
-      GH_TOKEN: ${{ needs.mint-release-token.outputs.token }}
+      GH_TOKEN: ${{ needs.mint-token.outputs.token }}
 
   tf-apply:
     if: github.ref_type == 'tag' || github.event_name == 'workflow_dispatch'
