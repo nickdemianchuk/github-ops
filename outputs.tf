@@ -10,7 +10,7 @@ output "version" {
   value = var.release_version
 }
 
-output "github_apps" {
+output "apps" {
   value = {
     octo_buddy = module.octo_buddy.app_id
   }
