@@ -12,6 +12,6 @@ output "version" {
 
 output "apps" {
   value = {
-    octo_buddy = try(local.octo_buddy.app_id, null)
+    octo_buddy = local.octo_buddy.app_id
   }
 }

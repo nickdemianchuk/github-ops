@@ -9,7 +9,9 @@ module "actions" {
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
 
-  apps = local.apps
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
 
   rulesets = [
     {
@@ -22,7 +24,12 @@ module "actions" {
           exclude = []
         }
       }
-      bypass_actors = local.app_bypass_actors
+      bypass_actors = [
+        {
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -58,7 +65,9 @@ module "claude_ops" {
   visibility  = "public"
   topics      = ["claude", "ai"]
 
-  apps = local.apps
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
 
   rulesets = [
     {
@@ -71,7 +80,12 @@ module "claude_ops" {
           exclude = []
         }
       }
-      bypass_actors = local.app_bypass_actors
+      bypass_actors = [
+        {
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -107,7 +121,9 @@ module "git_ops" {
   visibility  = "public"
   topics      = ["git"]
 
-  apps = local.apps
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
 
   rulesets = [
     {
@@ -120,7 +136,12 @@ module "git_ops" {
           exclude = []
         }
       }
-      bypass_actors = local.app_bypass_actors
+      bypass_actors = [
+        {
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -156,7 +177,9 @@ module "github_ops" {
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
 
-  apps = local.apps
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
 
   rulesets = [
     {
@@ -169,7 +192,12 @@ module "github_ops" {
           exclude = []
         }
       }
-      bypass_actors = local.app_bypass_actors
+      bypass_actors = [
+        {
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true

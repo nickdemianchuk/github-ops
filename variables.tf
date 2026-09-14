@@ -17,6 +17,5 @@ variable "release_version" {
 variable "octo_buddy_private_key" {
   type        = string
   sensitive   = true
-  default     = null
-  description = "PEM private key for the octo-buddy GitHub App; app is skipped entirely when unset"
+  description = "PEM private key for the octo-buddy GitHub App"
 }
