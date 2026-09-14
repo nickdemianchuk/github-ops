@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/nickdemianchuk/github-ops/compare/0.3.0...0.4.0) (2026-09-14)
+
+
+### Features
+
+* add version variable for tf-apply output ([#25](https://github.com/nickdemianchuk/github-ops/issues/25)) ([b907920](https://github.com/nickdemianchuk/github-ops/commit/b90792029ebbcda58ae5e1f92d595bb9ac807b0d))
+
 # [0.3.0](https://github.com/nickdemianchuk/github-ops/compare/0.2.1...0.3.0) (2026-09-14)
 
 
