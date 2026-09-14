@@ -9,7 +9,7 @@ variable "client_id" {
 }
 
 variable "installation_id" {
-  type        = number
+  type        = string
   description = "Numeric installation ID of the App on this account"
 }
 

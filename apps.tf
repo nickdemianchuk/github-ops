@@ -6,7 +6,7 @@ module "octo_buddy" {
 
   app_id          = 4944088
   client_id       = "Iv23linVfoDqgbsPv65f"
-  installation_id = 161714415
+  installation_id = "161714415"
 
   repositories = [
     module.actions.name,
