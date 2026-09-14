@@ -9,3 +9,9 @@ output "repos" {
 output "version" {
   value = var.release_version
 }
+
+output "github_app" {
+  value = {
+    app_id = module.octo_buddy.app_id
+  }
+}

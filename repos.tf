@@ -9,6 +9,13 @@ module "actions" {
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
 
+  actions_variables = {
+    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+  }
+  actions_secrets = {
+    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -20,12 +27,7 @@ module "actions" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
-        }
-      ]
+      bypass_actors = [module.octo_buddy.bypass_actor]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -61,6 +63,13 @@ module "claude_ops" {
   visibility  = "public"
   topics      = ["claude", "ai"]
 
+  actions_variables = {
+    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+  }
+  actions_secrets = {
+    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -72,12 +81,7 @@ module "claude_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
-        }
-      ]
+      bypass_actors = [module.octo_buddy.bypass_actor]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -113,6 +117,13 @@ module "git_ops" {
   visibility  = "public"
   topics      = ["git"]
 
+  actions_variables = {
+    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+  }
+  actions_secrets = {
+    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -124,12 +135,7 @@ module "git_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
-        }
-      ]
+      bypass_actors = [module.octo_buddy.bypass_actor]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -165,6 +171,13 @@ module "github_ops" {
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
 
+  actions_variables = {
+    GH_APP_CLIENT_ID = module.octo_buddy.client_id
+  }
+  actions_secrets = {
+    GH_APP_PRIVATE_KEY = var.octo_buddy_private_key
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -176,12 +189,7 @@ module "github_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
-        }
-      ]
+      bypass_actors = [module.octo_buddy.bypass_actor]
       rules = {
         deletion         = true
         non_fast_forward = true
