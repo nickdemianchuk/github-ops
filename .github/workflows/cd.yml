@@ -15,8 +15,6 @@ jobs:
       issues: write
       pull-requests: write
     uses: nickdemianchuk/actions/.github/workflows/release.yml@main
-    with:
-      use_app_token: true
     secrets:
       APP_CLIENT_ID: ${{ vars.OCTO_BUDDY_CLIENT_ID }}
       APP_PRIVATE_KEY: ${{ secrets.OCTO_BUDDY_PRIVATE_KEY }}
