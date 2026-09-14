@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/nickdemianchuk/github-ops/compare/0.4.0...0.4.1) (2026-09-14)
+
+
+### Bug Fixes
+
+* update required check contexts for renamed jobs ([#27](https://github.com/nickdemianchuk/github-ops/issues/27)) ([a534a71](https://github.com/nickdemianchuk/github-ops/commit/a534a71b4abfb335416484451f2647f7ef4b876b))
+
 # [0.4.0](https://github.com/nickdemianchuk/github-ops/compare/0.3.0...0.4.0) (2026-09-14)
 
 
