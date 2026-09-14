@@ -1,3 +1,10 @@
+## [0.5.3](https://github.com/nickdemianchuk/github-ops/compare/0.5.2...0.5.3) (2026-09-14)
+
+
+### Bug Fixes
+
+* target all tags in disable tag deletion ruleset ([#33](https://github.com/nickdemianchuk/github-ops/issues/33)) ([a104602](https://github.com/nickdemianchuk/github-ops/commit/a104602466d484f202d81f1354642c406099a6c7))
+
 ## [0.5.2](https://github.com/nickdemianchuk/github-ops/compare/0.5.1...0.5.2) (2026-09-14)
 
 
