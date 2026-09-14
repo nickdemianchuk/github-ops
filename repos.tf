@@ -27,7 +27,12 @@ module "actions" {
           exclude = []
         }
       }
-      bypass_actors = [module.octo_buddy.bypass_actor]
+      bypass_actors = [
+        {
+          actor_id   = module.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -81,7 +86,12 @@ module "claude_ops" {
           exclude = []
         }
       }
-      bypass_actors = [module.octo_buddy.bypass_actor]
+      bypass_actors = [
+        {
+          actor_id   = module.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -135,7 +145,12 @@ module "git_ops" {
           exclude = []
         }
       }
-      bypass_actors = [module.octo_buddy.bypass_actor]
+      bypass_actors = [
+        {
+          actor_id   = module.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -189,7 +204,12 @@ module "github_ops" {
           exclude = []
         }
       }
-      bypass_actors = [module.octo_buddy.bypass_actor]
+      bypass_actors = [
+        {
+          actor_id   = module.octo_buddy.app_id
+          actor_type = "Integration"
+        }
+      ]
       rules = {
         deletion         = true
         non_fast_forward = true
