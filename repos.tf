@@ -47,6 +47,12 @@ module "actions" {
       name        = "Disable tag deletion"
       target      = "tag"
       enforcement = "active"
+      conditions = {
+        ref_name = {
+          include = ["~ALL"]
+          exclude = []
+        }
+      }
       rules = {
         deletion = true
       }
@@ -103,6 +109,12 @@ module "claude_ops" {
       name        = "Disable tag deletion"
       target      = "tag"
       enforcement = "active"
+      conditions = {
+        ref_name = {
+          include = ["~ALL"]
+          exclude = []
+        }
+      }
       rules = {
         deletion = true
       }
@@ -159,6 +171,12 @@ module "git_ops" {
       name        = "Disable tag deletion"
       target      = "tag"
       enforcement = "active"
+      conditions = {
+        ref_name = {
+          include = ["~ALL"]
+          exclude = []
+        }
+      }
       rules = {
         deletion = true
       }
@@ -215,6 +233,12 @@ module "github_ops" {
       name        = "Disable tag deletion"
       target      = "tag"
       enforcement = "active"
+      conditions = {
+        ref_name = {
+          include = ["~ALL"]
+          exclude = []
+        }
+      }
       rules = {
         deletion = true
       }
