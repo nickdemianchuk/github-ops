@@ -13,3 +13,9 @@ variable "release_version" {
   description = "Version of the release being applied"
   default     = null
 }
+
+variable "octo_buddy_private_key" {
+  type        = string
+  sensitive   = true
+  description = "PEM private key for the Octo Buddy GitHub App"
+}

@@ -9,6 +9,10 @@ module "actions" {
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
 
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -22,8 +26,8 @@ module "actions" {
       }
       bypass_actors = [
         {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
         }
       ]
       rules = {
@@ -61,6 +65,10 @@ module "claude_ops" {
   visibility  = "public"
   topics      = ["claude", "ai"]
 
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -74,8 +82,8 @@ module "claude_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
         }
       ]
       rules = {
@@ -113,6 +121,10 @@ module "git_ops" {
   visibility  = "public"
   topics      = ["git"]
 
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -126,8 +138,8 @@ module "git_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
         }
       ]
       rules = {
@@ -165,6 +177,10 @@ module "github_ops" {
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
 
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
+
   rulesets = [
     {
       name        = "Default branch"
@@ -178,8 +194,8 @@ module "github_ops" {
       }
       bypass_actors = [
         {
-          actor_id   = 5
-          actor_type = "RepositoryRole"
+          actor_id   = local.octo_buddy.app_id
+          actor_type = "Integration"
         }
       ]
       rules = {
