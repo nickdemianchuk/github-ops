@@ -9,9 +9,7 @@ module "actions" {
   visibility  = "public"
   topics      = ["github-actions", "ci-cd"]
 
-  apps = {
-    octo_buddy = local.octo_buddy
-  }
+  apps = local.apps
 
   rulesets = [
     {
@@ -24,12 +22,7 @@ module "actions" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.octo_buddy.app_id
-          actor_type = "Integration"
-        }
-      ]
+      bypass_actors = local.app_bypass_actors
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -65,9 +58,7 @@ module "claude_ops" {
   visibility  = "public"
   topics      = ["claude", "ai"]
 
-  apps = {
-    octo_buddy = local.octo_buddy
-  }
+  apps = local.apps
 
   rulesets = [
     {
@@ -80,12 +71,7 @@ module "claude_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.octo_buddy.app_id
-          actor_type = "Integration"
-        }
-      ]
+      bypass_actors = local.app_bypass_actors
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -121,9 +107,7 @@ module "git_ops" {
   visibility  = "public"
   topics      = ["git"]
 
-  apps = {
-    octo_buddy = local.octo_buddy
-  }
+  apps = local.apps
 
   rulesets = [
     {
@@ -136,12 +120,7 @@ module "git_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.octo_buddy.app_id
-          actor_type = "Integration"
-        }
-      ]
+      bypass_actors = local.app_bypass_actors
       rules = {
         deletion         = true
         non_fast_forward = true
@@ -177,9 +156,7 @@ module "github_ops" {
   visibility  = "public"
   topics      = ["terraform", "github", "iac"]
 
-  apps = {
-    octo_buddy = local.octo_buddy
-  }
+  apps = local.apps
 
   rulesets = [
     {
@@ -192,12 +169,7 @@ module "github_ops" {
           exclude = []
         }
       }
-      bypass_actors = [
-        {
-          actor_id   = local.octo_buddy.app_id
-          actor_type = "Integration"
-        }
-      ]
+      bypass_actors = local.app_bypass_actors
       rules = {
         deletion         = true
         non_fast_forward = true
