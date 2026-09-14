@@ -1,3 +1,15 @@
+# [0.5.0](https://github.com/nickdemianchuk/github-ops/compare/0.4.2...0.5.0) (2026-09-14)
+
+
+### Bug Fixes
+
+* mint app token inside release job ([#30](https://github.com/nickdemianchuk/github-ops/issues/30)) ([0657691](https://github.com/nickdemianchuk/github-ops/commit/06576911b836bcefa9154b297154cd649ed121e7))
+
+
+### Features
+
+* manage octo-buddy github app via terraform ([#29](https://github.com/nickdemianchuk/github-ops/issues/29)) ([937e918](https://github.com/nickdemianchuk/github-ops/commit/937e9189d6ddb590f164e6d3766ad35106c20534))
+
 ## [0.4.2](https://github.com/nickdemianchuk/github-ops/compare/0.4.1...0.4.2) (2026-09-14)
 
 
