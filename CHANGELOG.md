@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/nickdemianchuk/github-ops/compare/0.6.0...0.6.1) (2026-09-15)
+
+
+### Bug Fixes
+
+* update sandbox-factory description ([#35](https://github.com/nickdemianchuk/github-ops/issues/35)) ([8df272e](https://github.com/nickdemianchuk/github-ops/commit/8df272e038d807461e2ad0807e65776f717520a3))
+
 # [0.6.0](https://github.com/nickdemianchuk/github-ops/compare/0.5.3...0.6.0) (2026-09-15)
 
 
