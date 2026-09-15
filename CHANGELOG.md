@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/nickdemianchuk/github-ops/compare/0.6.1...0.7.0) (2026-09-15)
+
+
+### Features
+
+* make sandbox-factory public, add rulesets ([#36](https://github.com/nickdemianchuk/github-ops/issues/36)) ([fbee92f](https://github.com/nickdemianchuk/github-ops/commit/fbee92ff61efd5376a2c631a19ff4b7533297769))
+
 ## [0.6.1](https://github.com/nickdemianchuk/github-ops/compare/0.6.0...0.6.1) (2026-09-15)
 
 
