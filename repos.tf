@@ -184,6 +184,22 @@ module "git_ops" {
   ]
 }
 
+module "sandbox_factory" {
+  source = "./modules/github-repo"
+  providers = {
+    github = github
+  }
+
+  name        = "sandbox-factory"
+  description = "Kubernetes operator provisioning isolated sandboxes for agent runtimes"
+  visibility  = "private"
+  topics      = ["kubernetes", "agent-sandbox"]
+
+  apps = {
+    octo_buddy = local.octo_buddy
+  }
+}
+
 module "github_ops" {
   source = "./modules/github-repo"
   providers = {
