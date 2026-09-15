@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/nickdemianchuk/github-ops/compare/0.5.3...0.6.0) (2026-09-15)
+
+
+### Features
+
+* add sandbox-factory repo ([#34](https://github.com/nickdemianchuk/github-ops/issues/34)) ([dcddbd6](https://github.com/nickdemianchuk/github-ops/commit/dcddbd6781f50406d61eed4b3fe102420bfe84e8))
+
 ## [0.5.3](https://github.com/nickdemianchuk/github-ops/compare/0.5.2...0.5.3) (2026-09-14)
 
 
