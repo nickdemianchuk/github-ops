@@ -191,7 +191,7 @@ module "sandbox_factory" {
   }
 
   name        = "sandbox-factory"
-  description = "Kubernetes operator provisioning isolated sandboxes for agent runtimes"
+  description = "Kubernetes operator for isolated agent sandboxes"
   visibility  = "private"
   topics      = ["kubernetes", "agent-sandbox"]
 
