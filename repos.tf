@@ -190,10 +190,10 @@ module "sandbox_factory" {
     github = github
   }
 
-  name        = "sandbox-factory"
+  name        = "agent-factory"
   description = "Kubernetes operator for isolated agent sandboxes"
   visibility  = "public"
-  topics      = ["kubernetes", "agent-sandbox"]
+  topics      = ["ai", "agent-sandbox", "self-hosted-agent"]
 
   apps = {
     octo_buddy = local.octo_buddy
