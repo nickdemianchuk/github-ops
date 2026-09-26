@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/nickdemianchuk/github-ops/compare/0.7.0...0.8.0) (2026-09-26)
+
+
+### Features
+
+* rename repository and update topics ([#37](https://github.com/nickdemianchuk/github-ops/issues/37)) ([f542828](https://github.com/nickdemianchuk/github-ops/commit/f5428286a2090bcf9ddacca8b12b0bd29a57962e))
+
 # [0.7.0](https://github.com/nickdemianchuk/github-ops/compare/0.6.1...0.7.0) (2026-09-15)
 
 
