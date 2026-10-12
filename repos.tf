@@ -316,7 +316,7 @@ module "job_hunter" {
 
   name        = "job-hunter"
   description = "AI-powered job hunter"
-  visibility  = "private"
+  visibility  = "public"
   topics      = ["ai", "job-search"]
 
   apps = {
