@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/nickdemianchuk/github-ops/compare/0.8.0...0.9.0) (2026-10-12)
+
+
+### Features
+
+* add job-hunter repo ([#38](https://github.com/nickdemianchuk/github-ops/issues/38)) ([b6b2ee8](https://github.com/nickdemianchuk/github-ops/commit/b6b2ee82ee9fc87883f15ebcd0f41c040e1a5b09))
+
 # [0.8.0](https://github.com/nickdemianchuk/github-ops/compare/0.7.0...0.8.0) (2026-09-26)
 
 
