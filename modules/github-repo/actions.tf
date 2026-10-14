@@ -18,6 +18,12 @@ resource "github_actions_variable" "actions_runner" {
   value         = var.actions_runner
 }
 
+resource "github_workflow_repository_permissions" "this" {
+  repository                       = github_repository.this.name
+  default_workflow_permissions     = var.actions_default_permissions
+  can_approve_pull_request_reviews = false
+}
+
 resource "github_actions_variable" "app_client_id" {
   for_each      = var.apps
   repository    = github_repository.this.name
