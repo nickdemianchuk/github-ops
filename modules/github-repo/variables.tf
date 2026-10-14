@@ -110,6 +110,16 @@ variable "actions_runner" {
   default = "ubuntu-26.04"
 }
 
+variable "actions_default_permissions" {
+  type    = string
+  default = "read"
+
+  validation {
+    condition     = contains(["read", "write"], var.actions_default_permissions)
+    error_message = "actions_default_permissions must be \"read\" or \"write\"."
+  }
+}
+
 variable "apps" {
   type = map(object({
     client_id   = string

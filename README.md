@@ -11,6 +11,7 @@ Each repo is declared as an instance of the `./modules/github-repo` module (`rep
 - collaborators
 - secrets
 - Actions variables, including `ACTIONS_RUNNER` (the `runs-on` label for workflows, set per repo via `actions_runner`, default `ubuntu-26.04`)
+- Default `GITHUB_TOKEN` permissions for workflows that omit `permissions` (set per repo via `actions_default_permissions`, `read` or `write`, default `read`)
 - webhooks
 - GitHub App credential distribution
 
