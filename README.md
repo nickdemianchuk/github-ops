@@ -10,6 +10,7 @@ Each repo is declared as an instance of the `./modules/github-repo` module (`rep
 - branch/tag rulesets
 - collaborators
 - secrets
+- Actions variables, including `ACTIONS_RUNNER` (the `runs-on` label for workflows, set per repo via `actions_runner`, default `ubuntu-26.04`)
 - webhooks
 - GitHub App credential distribution
 

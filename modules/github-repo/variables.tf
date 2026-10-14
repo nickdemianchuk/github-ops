@@ -105,6 +105,11 @@ variable "actions_variables" {
   default = {}
 }
 
+variable "actions_runner" {
+  type    = string
+  default = "ubuntu-26.04"
+}
+
 variable "apps" {
   type = map(object({
     client_id   = string
