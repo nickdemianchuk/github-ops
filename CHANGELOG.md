@@ -1,3 +1,10 @@
+# [0.11.0](https://github.com/nickdemianchuk/github-ops/compare/0.10.0...0.11.0) (2026-10-14)
+
+
+### Features
+
+* add actions default permissions input ([#40](https://github.com/nickdemianchuk/github-ops/issues/40)) ([cc62f23](https://github.com/nickdemianchuk/github-ops/commit/cc62f230236bf7b54d4a65821f0ad7b06111e4bb))
+
 # [0.10.0](https://github.com/nickdemianchuk/github-ops/compare/0.9.0...0.10.0) (2026-10-14)
 
 
