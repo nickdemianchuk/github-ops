@@ -12,6 +12,12 @@ resource "github_actions_variable" "this" {
   value         = each.value
 }
 
+resource "github_actions_variable" "actions_runner" {
+  repository    = github_repository.this.name
+  variable_name = "ACTIONS_RUNNER"
+  value         = var.actions_runner
+}
+
 resource "github_actions_variable" "app_client_id" {
   for_each      = var.apps
   repository    = github_repository.this.name
