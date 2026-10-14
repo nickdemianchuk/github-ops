@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/nickdemianchuk/github-ops/compare/0.9.0...0.10.0) (2026-10-14)
+
+
+### Features
+
+* add actions runner variable ([#39](https://github.com/nickdemianchuk/github-ops/issues/39)) ([06db639](https://github.com/nickdemianchuk/github-ops/commit/06db639a5dcf263d1fb919e2c2cafde7cb0a3112))
+
 # [0.9.0](https://github.com/nickdemianchuk/github-ops/compare/0.8.0...0.9.0) (2026-10-12)
 
 
