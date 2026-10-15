@@ -1,3 +1,10 @@
+# [0.13.0](https://github.com/nickdemianchuk/github-ops/compare/0.12.0...0.13.0) (2026-10-15)
+
+
+### Features
+
+* set `job_hunter` repo visibility to private ([#42](https://github.com/nickdemianchuk/github-ops/issues/42)) ([332e3c7](https://github.com/nickdemianchuk/github-ops/commit/332e3c7e02c762a5bed78d83adabda6c73efa5f4))
+
 # [0.12.0](https://github.com/nickdemianchuk/github-ops/compare/0.11.0...0.12.0) (2026-10-15)
 
 
