@@ -1,3 +1,10 @@
+# [0.12.0](https://github.com/nickdemianchuk/github-ops/compare/0.11.0...0.12.0) (2026-10-15)
+
+
+### Features
+
+* remove apps and rulesets from repos.tf ([#41](https://github.com/nickdemianchuk/github-ops/issues/41)) ([18dfa0b](https://github.com/nickdemianchuk/github-ops/commit/18dfa0bdc71659729bffa3fc492fc8f5df9e1f8b))
+
 # [0.11.0](https://github.com/nickdemianchuk/github-ops/compare/0.10.0...0.11.0) (2026-10-14)
 
 
